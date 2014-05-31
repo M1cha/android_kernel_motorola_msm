@@ -2491,7 +2491,6 @@ static int dvb_dmxdev_section_callback(const u8 *buffer1, size_t buffer1_len,
 					DMX_FILTER_CC_ERROR;
 		else
 			event.params.section.flags = 0;
-	}
 
 	dvb_dmxdev_add_event(&dmxdevfilter->events, &event);
 
@@ -2603,7 +2602,6 @@ static int dvb_dmxdev_ts_callback(const u8 *buffer1, size_t buffer1_len,
 				events->current_event_data_size = 0;
 			}
 		}
-	}
 
 	spin_unlock(&dmxdevfilter->dev->lock);
 	wake_up_all(&buffer->queue);
